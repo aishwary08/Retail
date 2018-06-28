@@ -16,6 +16,11 @@
         android:title="Deals &amp; Offers" />
 
     <item
+        android:id="@+id/nav_review"
+        android:icon="@mipmap/review_black_18dp"
+        android:title="User Reviews" />
+
+    <item
         android:id="@+id/nav_logout"
         android:icon="@mipmap/logout_24"
         android:title="Logout" />

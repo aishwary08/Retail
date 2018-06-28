@@ -432,6 +432,10 @@ public class Home extends AppCompatActivity implements BeaconConsumer, Navigatio
             Intent i = new Intent(Home.this, DealsOffers.class);
             startActivity(i);
             overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+        } else if(id == R.id.nav_review){
+            Intent i = new Intent(Home.this, ViewFeedbackActivity.class);
+            startActivity(i);
+            overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         }
         return false;
     }

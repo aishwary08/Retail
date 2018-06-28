@@ -48,6 +48,12 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:+'
 }
 dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
     compile 'com.github.channguyen:adv:1.0.0'
     compile 'com.eyalbira.loadingdots:loading-dots:1.0.2'
 }

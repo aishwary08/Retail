@@ -1,10 +1,12 @@
 package com.software.beacon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -38,7 +40,7 @@ public class CartActivity extends AppCompatActivity implements ValidationRespons
     private double cartPayable = 0.0;
     private TextView textViewCartTotal, textViewCartDiscount, textViewCartPayable;
     private LinearLayout priceDetailsContainer;
-
+    private AppCompatButton btnPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,10 @@ public class CartActivity extends AppCompatActivity implements ValidationRespons
         textViewCartDiscount = (TextView) findViewById(R.id.text_cart_discount);
         textViewCartPayable = (TextView) findViewById(R.id.text_cart_payable);
         priceDetailsContainer = (LinearLayout) findViewById(R.id.price_details_container);
+        btnPay = (AppCompatButton) findViewById(R.id.btn_pay);
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Get_Result conn = new Get_Result(this);
         conn.delegate = CartActivity.this;
@@ -98,7 +104,15 @@ public class CartActivity extends AppCompatActivity implements ValidationRespons
         recyclerView.setAdapter(adapter);
         showProgress(true);
 
-
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cartPayable>0){
+                    Intent i = new Intent(CartActivity.this,FeedbackActivity.class);
+                    startActivity(i);
+                }
+            }
+        });
     }
 
     @Override

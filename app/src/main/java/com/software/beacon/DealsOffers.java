@@ -47,6 +47,8 @@ public class DealsOffers extends AppCompatActivity implements ValidationResponse
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         listItems = new ArrayList<>();
         adapter = new DealsOffersAdapter(listItems, this);
         recyclerView.setAdapter(adapter);

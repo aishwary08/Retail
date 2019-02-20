@@ -82,7 +82,7 @@ public class SignupActivity extends AppCompatActivity implements ValidationRespo
         String password = _passwordText.getEditText().getText().toString();
         name=name.substring(0,1).toUpperCase()+name.substring(1);
         Log.e("name",name);
-        String query = "insert into users values('" + name + "','" + mobile + "','" + password + "');";
+        String query = "insert into users values('" + mobile + "','" + name + "','" + password + "');";
 
         Get_Result conn = new Get_Result(this);
         conn.delegate = SignupActivity.this;

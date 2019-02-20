@@ -13,13 +13,16 @@ public class URLS {
     static String User_Cart = "http://ourbeaconproject.heliohost.org/update_into_cart.php";
     static String Remove_From_Cart_URL = "http://ourbeaconproject.heliohost.org/remove_from_cart.php";*/
 
-    static String SignUp_URL = "http://192.168.1.16:81/signup.php";
-    static String Login_URL = "http://192.168.1.16:81/login.php";
-    static String Fetch_Product_URL = "http://192.168.1.16:81/beacon/get_result.php";
-    static String Fetch_Cart_URL = "http://192.168.1.16:81/beacon/get_multiple_result.php";
-    static String User_Cart = "http://192.168.1.16:81/beacon/update_into_cart.php";
-    static String Remove_From_Cart_URL = "http://192.168.1.16:81/beacon/remove_from_cart.php";
-    static String Write_Feedback_URL = "http://192.168.1.16:81/beacon/write_feedback.php";
+    static String my_url = "http://192.168.43.89:81/beacon/";
+    static String SignUp_URL = my_url + "signup.php";
+    static String Login_URL = my_url + "login.php";
+    static String Fetch_Product_URL = my_url + "get_result.php";
+    static String Fetch_Cart_URL = my_url + "get_multiple_result.php";
+    static String User_Cart = my_url + "update_into_cart.php";
+    static String Remove_From_Cart_URL = my_url + "remove_from_cart.php";
+    static String Write_Feedback_URL = my_url + "write_feedback.php";
+
+    static String Local = my_url + "images/";
 
     static int mCartItemCount = 0;
     static boolean spinnerFlag = false;

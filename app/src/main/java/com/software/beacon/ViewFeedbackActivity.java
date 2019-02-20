@@ -42,11 +42,13 @@ public class ViewFeedbackActivity extends AppCompatActivity implements Validatio
         conn.execute(URLS.Fetch_Product_URL, query);
 
         recyclerView = (RecyclerView) findViewById(R.id.viewfeedback_recycler_view);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(20);
         recyclerView.setDrawingCacheEnabled(true);
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
         mRatingBar = (RatingBar) findViewById(R.id.ratingBarMain);
         textRating = (TextView) findViewById(R.id.totalStar);

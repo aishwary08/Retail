@@ -1,5 +1,7 @@
 package com.software.beacon;
 
+import android.util.Log;
+
 /**
  * Created by LENOVO on 14-03-2018.
  */
@@ -16,7 +18,9 @@ public class DealsOffersItem {
     public DealsOffersItem(String head, String desc, String imageURL, String discounted, String discount, String validity) {
         this.description = head;
         this.original_price = desc;
-        this.imageURL = imageURL;
+        String[] bits = imageURL.split("/");
+        Log.e("dopost",bits[bits.length-1]);
+        this.imageURL = URLS.Local + bits[bits.length-1];
         this.discounted_price = discounted;
         this.discount = discount;
         this.validity = validity;

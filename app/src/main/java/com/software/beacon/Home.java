@@ -292,11 +292,12 @@ public class Home extends AppCompatActivity implements BeaconConsumer, Navigatio
         }
     }
 
-    public void populateOffers(String beacon) {
+    public void populateOffers(String beaconId) {
+        BeaconConfig beaconConfig = new BeaconConfig();
         Get_Result conn = new Get_Result(this);
         conn.homeDelegate = Home.this;
-        String type = "S";
-        if (beacon.equals("1")) type = "H";
+        String type = beaconConfig.getBeaconType(beaconId);
+        Log.d(BEACON_TAG, type);
         String query = "select * from product left JOIN deals on product.product_id = deals.deals_id where product_type='" + type + "'";
         conn.execute(URLS.Fetch_Product_URL, query, "home");
 

@@ -13,7 +13,7 @@ public class URLS {
     static String User_Cart = "http://ourbeaconproject.heliohost.org/update_into_cart.php";
     static String Remove_From_Cart_URL = "http://ourbeaconproject.heliohost.org/remove_from_cart.php";*/
 
-    static String my_url = "http://192.168.43.89:81/beacon/";
+    static String my_url = "https://smart-beacon.herokuapp.com/";
     static String SignUp_URL = my_url + "signup.php";
     static String Login_URL = my_url + "login.php";
     static String Fetch_Product_URL = my_url + "get_result.php";

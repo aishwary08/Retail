@@ -1,7 +1,5 @@
 package com.software.beacon;
 
-import android.util.Log;
-
 /**
  * Created by LENOVO on 14-03-2018.
  */
@@ -15,12 +13,10 @@ public class DealsOffersItem {
     private String validity;
 
 
-    public DealsOffersItem(String head, String desc, String imageURL, String discounted, String discount, String validity) {
+    public DealsOffersItem(String head, String desc, String image, String discounted, String discount, String validity) {
         this.description = head;
         this.original_price = desc;
-        String[] bits = imageURL.split("/");
-        Log.e("dopost",bits[bits.length-1]);
-        this.imageURL = URLS.Local + bits[bits.length-1];
+        this.imageURL = URLS.Local + image;
         this.discounted_price = discounted;
         this.discount = discount;
         this.validity = validity;

@@ -13,12 +13,11 @@ public class CartItem {
     private String product_id;
 
 
-    public CartItem(String head, String price, String imageURL, String discounted, String discount, int qty, String product_id) {
+    public CartItem(String head, String price, String image, String discounted, String discount, int qty, String product_id) {
         this.description = head;
         this.original_price = price;
-        String[] bits = imageURL.split("/");
-        Log.e("dopost",bits[bits.length-1]);
-        this.imageURL = URLS.Local + bits[bits.length-1];
+        this.imageURL = URLS.Local + image;
+        Log.d("url", imageURL);
         this.discounted_price = discounted;
         this.discount = discount;
         this.qty = qty;
